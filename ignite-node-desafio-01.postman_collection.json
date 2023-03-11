@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "2d3efd0a-db8c-4985-a1a9-fcf3b14841c9",
+		"name": "ignite-node-desafio-01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9113747"
+	},
+	"item": [
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New Task 002\",\r\n    \"description\": \"Description Task 002\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/tasks",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New Task 002A\",\r\n    \"description\": \"Description Task 002A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/tasks/1996421f-74cd-41f0-9efc-77226fc29b31",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"tasks",
+						"1996421f-74cd-41f0-9efc-77226fc29b31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/tasks",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/tasks/5899da26-34d6-4343-8059-4559b67e4c0b",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"tasks",
+						"5899da26-34d6-4343-8059-4559b67e4c0b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Toggle Task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/tasks/1996421f-74cd-41f0-9efc-77226fc29b31/complete",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"tasks",
+						"1996421f-74cd-41f0-9efc-77226fc29b31",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3333",
+			"type": "string"
+		}
+	]
+}
